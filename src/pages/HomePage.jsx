@@ -1,10 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
+import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+
+class Example extends Component {
+  render() {
+    return <FlipClockCountdown to={new Date().getTime() + 24 * 1000 + 5000} />;
+  }
+}
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold mb-8">Welcome to the Homepage</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black">
+      <h1 className="flex justify-center mt-8 text-5xl font-bold mb-8 text-red-500 absolute top-0 ">
+        Debug Or Die
+      </h1>
+      <div className="absolute top-0 right-0">
+        <Example />
+      </div>
       <div className="grid grid-cols-2 gap-4">
         <Link
           to="/page1"
