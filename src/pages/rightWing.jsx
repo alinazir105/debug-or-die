@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Page1 = () => {
+const Page3 = () => {
   const [selctedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -18,7 +18,7 @@ const Page1 = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <h1 className="text-5xl font-bold absolute top-0 mt-8">
-        Left Wing Failing
+        Right Wing Failing
       </h1>
       <h2 className="text-3xl font-bold mb-8">Download and Submit Your Code</h2>
       <h2 className="text-3xl font-bold mb-8">To Save the Wing</h2>
@@ -43,4 +43,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
+export default Page3;

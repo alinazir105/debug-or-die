@@ -40,25 +40,25 @@ const HomePage = () => {
           to="/page1"
           className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
         >
-          Go to Page 1
+          Engine
         </Link>
         <Link
           to="/page2"
           className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
         >
-          Go to Page 2
+          Left Wing
         </Link>
         <Link
           to="/page3"
           className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600"
         >
-          Go to Page 3
+          Right Wing
         </Link>
         <Link
           to="/page4"
           className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
         >
-          Go to Page 4
+          Landing Gear
         </Link>
       </div>
     </div>
