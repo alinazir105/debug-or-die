@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Page2 = () => {
+const LeftWing = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploading, setUploading] = useState(false);
 
@@ -71,4 +71,4 @@ const Page2 = () => {
   );
 };
 
-export default Page2;
+export default LeftWing;

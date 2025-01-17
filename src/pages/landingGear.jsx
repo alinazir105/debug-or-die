@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Page4 = () => {
+const LandingGear = () => {
   const [selctedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -43,4 +43,4 @@ const Page4 = () => {
   );
 };
 
-export default Page4;
+export default LandingGear;

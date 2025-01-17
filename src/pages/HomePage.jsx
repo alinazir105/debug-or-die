@@ -37,25 +37,25 @@ const HomePage = () => {
       </div>
       <div className="grid grid-cols-2 gap-4">
         <Link
-          to="/page1"
+          to="/engine"
           className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
         >
           Engine
         </Link>
         <Link
-          to="/page2"
+          to="/leftWing"
           className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
         >
           Left Wing
         </Link>
         <Link
-          to="/page3"
+          to="/rightWing"
           className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600"
         >
           Right Wing
         </Link>
         <Link
-          to="/page4"
+          to="/landingGear"
           className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
         >
           Landing Gear

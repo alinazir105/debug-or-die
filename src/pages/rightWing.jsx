@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Page3 = () => {
+const RightWing = () => {
   const [selctedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -43,4 +43,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default RightWing;
