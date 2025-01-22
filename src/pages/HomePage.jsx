@@ -13,25 +13,25 @@ const HomePage = () => {
       id: "engine2",
       label: "Engine 2",
       path: "/page1",
-      labelPosition: { top: "140px", left: "460px" },
+      labelPosition: { top: "140px", left: "830px" },
     },
     {
       id: "wings",
       label: "Wings",
       path: "/page2",
-      labelPosition: { top: "250px", left: "250px" },
+      labelPosition: { top: "280px", left: "600px" },
     },
     {
       id: "engine1",
       label: "Engine 1",
       path: "/page3",
-      labelPosition: { top: "280px", left: "350px" },
+      labelPosition: { top: "280px", left: "750px" },
     },
     {
       id: "tail",
       label: "Tail",
       path: "/page4",
-      labelPosition: { top: "130px", left: "200px" },
+      labelPosition: { top: "150px", left: "550px" },
     },
   ];
 
@@ -63,8 +63,8 @@ const HomePage = () => {
         <motion.div
           className="absolute flex justify-center items-center"
           style={{
-            top: "10%",
-            left: "20%",
+            top: "15%",
+            left: "35%",
             transform: "translate(-50%, -50%)", // Center the airplane
             width: "400px",
             height: "300px",
