@@ -1,6 +1,34 @@
 import React, { useState } from "react";
+import { Component } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import airplane from '../assets/aeroplane-147495.svg';
+import airplane from "../assets/aeroplane-147495.svg";
+import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
+import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+
+class Example extends Component {
+  render() {
+    return (
+      <FlipClockCountdown
+        to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
+        renderMap={[false, false, true, true]}
+        labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
+        labelStyle={{
+          fontSize: 10,
+          fontWeight: 500,
+          textTransform: "uppercase",
+        }}
+        digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}
+        dividerStyle={{ color: "white", height: 1 }}
+        separatorStyle={{ color: "red", size: "6px" }}
+        duration={0.5}
+      >
+        Finished
+      </FlipClockCountdown>
+    );
+  }
+}
+
 const HomePage = () => {
   const [activeArea, setActiveArea] = useState(null);
 
@@ -44,22 +72,14 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <h1 className="text-3xl font-bold mb-8">Interactive Airplane Guide</h1>
-
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black">
+      <h1 className="flex justify-center mt-8 text-5xl font-bold mb-8 text-red-500 absolute top-0 ">
+        Debug Or Die
+      </h1>
+      <div className="absolute top-0 right-0 overflow-hidden">
+        <Example />
+      </div>
       <div className="relative w-full h-[400px]">
-        {/* <motion.div
-          className="absolute w-[300px] h-[300px]"
-          initial={{ x: -500, y: 0 }}
-          animate={{ x: 800, y: [-20, 20, -20] }}
-          transition={{ repeat: Infinity, duration: 5 }}
-        >
-          <img
-            src={airplane} // Replace with your airplane image URL
-            alt="Flying Airplane"
-            className="w-full h-auto"
-          />
-        </motion.div> */}
         <motion.div
           className="absolute flex justify-center items-center"
           style={{
@@ -87,7 +107,6 @@ const HomePage = () => {
           />
         </motion.div>
 
-
         {areas.map((area) => (
           <div
             key={area.id}
@@ -112,23 +131,38 @@ const HomePage = () => {
             </button>
           </div>
         ))}
+
       </div>
 
-      <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-xl font-semibold mb-4">Navigation Guide</h2>
-        <div className="grid grid-cols-2 gap-4">
-          {areas.map((area) => (
-            <div key={area.id} className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-              <span>
-                {area.label} - Page {area.path.slice(-1)}
-              </span>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 gap-4">
+        <Link
+          to="/engine"
+          className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        >
+          Engine
+        </Link>
+        <Link
+          to="/leftWing"
+          className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+        >
+          Left Wing
+        </Link>
+        <Link
+          to="/rightWing"
+          className="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600"
+        >
+          Right Wing
+        </Link>
+        <Link
+          to="/landingGear"
+          className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+        >
+          Landing Gear
+        </Link>
       </div>
     </div>
   );
 };
+
 
 export default HomePage;
