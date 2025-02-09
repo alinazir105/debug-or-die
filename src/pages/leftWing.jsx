@@ -1,44 +1,29 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const LeftWing = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [uploading, setUploading] = useState(false);
+export default function LeftWingPage() {
+  const [code, setCode] = useState("");
+  const [results, setResults] = useState(null);
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if (!selectedFile) {
-      alert("Please select a file to submit");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("file", selectedFile);
-
-    setUploading(true);
-
+  const handleSubmit = async () => {
     try {
-      const response = await fetch("/api/testLeftWing", {
+      const response = await fetch("/api/server_leftWing", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ code }),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
-        alert(`File ${selectedFile.name} submitted successfully`);
+      if (data.results.success) {
+        setResults({ success: true, message: "Code passes static analysis!" });
       } else {
-        alert("Error: " + data.message);
+        setResults({ success: false, errors: data.results.errors });
       }
     } catch (error) {
-      console.error("Error uploading file:", error);
-      alert("An error occurred while uploading the file.");
-    } finally {
-      setUploading(false);
+      console.error("Failed to run static analysis", error);
+      setResults({ success: false, errors: ["Failed to run static analysis"] });
     }
   };
 
@@ -47,9 +32,12 @@ const LeftWing = () => {
       <h1 className="text-5xl font-bold absolute top-0 mt-8">
         Left Wing Failing
       </h1>
-      <h2 className="text-3xl font-bold mb-8">Download and Submit Your Code</h2>
+      <h2 className="text-3xl font-bold mt-32 mb-8">
+        Download and Submit Your Code
+      </h2>
       <h2 className="text-3xl font-bold mb-8">To Save the Wing</h2>
 
+      {/* Download Link */}
       <a
         href="/leftWingCode_debug.cpp"
         download="leftWingCode_debug.cpp"
@@ -58,17 +46,41 @@ const LeftWing = () => {
         Download Code File
       </a>
 
-      <input type="file" onChange={handleFileChange} className="mb-4" />
+      {/* Text Area for Code Input */}
+      <textarea
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        placeholder="Paste your C++ code here"
+        className="mt-4 p-4 border border-gray-400 rounded-md w-96 h-60"
+      ></textarea>
 
+      {/* Submit Button */}
       <button
         onClick={handleSubmit}
-        className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700"
-        disabled={uploading}
+        className="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-700"
       >
-        {uploading ? "Submitting..." : "Submit Code"}
+        Submit Code
       </button>
+
+      {/* Results */}
+      {results && (
+        <div className="mt-8 p-4 border rounded-md">
+          {results.success ? (
+            <p className="text-green-500">{results.message}</p>
+          ) : (
+            <div>
+              <p className="text-red-500">Static Analysis Errors:</p>
+              <ul className="list-disc pl-5">
+                {results.errors.map((error, index) => (
+                  <li key={index} className="text-red-500">
+                    {error}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
-};
-
-export default LeftWing;
+}
