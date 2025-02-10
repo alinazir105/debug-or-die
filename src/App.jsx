@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { BackgroundBeams } from "./pages/MainPage";
-import HomePage from "./pages/HomePage";
+import { CanvasRevealEffectDemo } from "./pages/HomePage";
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<BackgroundBeams/>}/>
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/home" element={<CanvasRevealEffectDemo />} />
         <Route path="/page1" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
         <Route path="/page3" element={<Page3 />} />
