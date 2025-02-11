@@ -1,0 +1,75 @@
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 10/02/2025, 4:16:29 pm
+Database Connected !!!
+gcc-oj-container Id : c4f09e1206801994279ef578d60fd88712d3e94a69884f6f8544e58f0d1b82e4
+py-oj-container Id : d16b866c089b6edcc59031298489fdf8b692147f26f9a82bcc202e042e0ed898
+js-oj-container Id : 6d805306f04f2916c24184c8e2c52b4701d652b12fe258e92c10ce87cecf3ba0
+java-oj-container Id : fc1a5f20524ad9ac0604df938f09e8ec85caab5398db436326d3d962caed6425
+
+All Containers Initialized
+GET /loggedIn 10/02/2025, 4:18:12 pm
+GET /problems 10/02/2025, 4:18:12 pm
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 10/02/2025, 10:05:31 pm
+Database Connected !!!
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 10/02/2025, 10:06:38 pm
+Database Connected !!!
+gcc-oj-container Id : 4f482c604ac90f4be94f0e400070fc39e22b6d3958415243fbc2a69a2afea540
+py-oj-container Id : 8d47d20cd1c52a4e69585253ffd1ee2a86e2aa74c11ab5dd2fd5ded6caa1eed6
+js-oj-container Id : af7fb9701532a9cfeb86e6abb8ab9c91e192fa8374ab97c2ba7a5983cd111bd2
+java-oj-container Id : 1c6b45ee0e13cbdd473b011d0daa133d3d6d97c50d1e3249bee6450cecfe0b47
+
+All Containers Initialized
+GET /problems 10/02/2025, 10:10:59 pm
+GET /loggedIn 10/02/2025, 10:10:59 pm
+POST /login 10/02/2025, 10:11:34 pm
+GET /loggedIn 10/02/2025, 10:11:35 pm
+GET /loggedIn 10/02/2025, 10:13:17 pm
+GET /problems 10/02/2025, 10:13:17 pm
+GET /problems 10/02/2025, 10:52:11 pm
+GET /loggedIn 10/02/2025, 10:52:11 pm
+GET /loggedIn 10/02/2025, 10:57:17 pm
+GET /problems 10/02/2025, 10:57:17 pm
+GET /problems 10/02/2025, 10:59:46 pm
+GET /loggedIn 10/02/2025, 10:59:46 pm
+GET /problems 10/02/2025, 11:00:46 pm
+GET /loggedIn 10/02/2025, 11:00:46 pm
+GET /problems 10/02/2025, 11:02:43 pm
+GET /loggedIn 10/02/2025, 11:02:43 pm
+GET /problems 10/02/2025, 11:04:27 pm
+GET /loggedIn 10/02/2025, 11:04:27 pm
+GET /problems 10/02/2025, 11:28:34 pm
+GET /loggedIn 10/02/2025, 11:28:34 pm
+GET /logout 10/02/2025, 11:28:42 pm
+GET /loggedIn 10/02/2025, 11:28:42 pm
+GET /loggedIn 10/02/2025, 11:28:46 pm
+GET /problems 10/02/2025, 11:28:46 pm
+POST /login 10/02/2025, 11:28:52 pm
+GET /loggedIn 10/02/2025, 11:28:52 pm
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 11/02/2025, 12:32:08 pm
+Database Connected !!!
+gcc-oj-container Id : d91d2e5d196aa0d8ebf40649304354ada6f07164f94a8c42a196c097aad3b294
+py-oj-container Id : 0f55d93769e26f668aeeaee000ce4ceee540eba3c239d3a66eb058e6af306ba9
+js-oj-container Id : 3209c82e89960a67522b6c93f7d44d66a58095384e8b97f9bf84d552ffe0faf6
+java-oj-container Id : 1d1c962a3e0069ae97b5216d0c0100c88a1fe4f9cad75eb9e450b085106832b8
+
+All Containers Initialized
+GET /loggedIn 11/02/2025, 12:32:42 pm
+GET /problems 11/02/2025, 12:32:42 pm
+POST /login 11/02/2025, 12:32:57 pm
+GET /loggedIn 11/02/2025, 12:32:58 pm
+GET /leaderboard 11/02/2025, 12:33:17 pm
+GET /problems 11/02/2025, 12:38:16 pm
+GET /loggedIn 11/02/2025, 12:38:16 pm
+GET /loggedIn 11/02/2025, 1:18:52 pm
+GET /problems 11/02/2025, 1:18:52 pm
+GET /loggedIn 11/02/2025, 1:36:09 pm
+GET /problems 11/02/2025, 1:36:09 pm
+GET /loggedIn 11/02/2025, 1:36:13 pm
+GET /problems 11/02/2025, 1:36:13 pm

@@ -18,6 +18,7 @@
     "ace-builds": "^1.7.1",
     "bootstrap": "^5.2.0-beta1",
     "copy-to-clipboard": "^3.3.2",
+    "framer-motion": "^12.4.2",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-ace": "^10.1.0",
