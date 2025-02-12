@@ -5,6 +5,7 @@ import classes from "./App.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import MainPage from "../src/pages/MainPage/MainPage";
+import HomePage from "../src/pages/HomePage/HomePage";
 import { useLocation } from "react-router";
 
 import NavBar from "./compenents/NavBar/NavBar";
@@ -37,17 +38,19 @@ const App = () => {
   }, [dispatch]);
 
   const isMainPage = location.pathname === "/mainpage";
+  const isHomePage = location.pathname === "/homepage";
 
   return (
-    <div className={isMainPage ? "" : classes.App}>
-      {!isMainPage && <NavBar />}
-      {!isMainPage && <Message />}
+    <div className={isMainPage || isHomePage ? "" : classes.App}>
+      {!isMainPage && !isHomePage && <NavBar />}
+      {!isMainPage && !isHomePage && <Message />}
       {/* {!isMainPage && <FooterFAB />} */}
-      {!isMainPage && <ScrollToTop />}
-      {!isMainPage && <NavigationStack />}
+      {!isMainPage && !isHomePage && <ScrollToTop />}
+      {!isMainPage && !isHomePage && <NavigationStack />}
 
       <Routes>
         <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/homepage" element={<HomePage />} />
       </Routes>
     </div>
   );

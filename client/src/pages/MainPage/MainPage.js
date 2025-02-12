@@ -72,7 +72,7 @@ const MainPage = () => {
         style={styles.startButton}
         onMouseOver={(e) => (e.target.style.backgroundColor = "darkred")}
         onMouseOut={(e) => (e.target.style.backgroundColor = "red")}
-        onClick={() => navigate("/questions")}
+        onClick={() => navigate("/homepage")}
       >
         Start Game
       </button>

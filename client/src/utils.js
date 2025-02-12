@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-// import { twMerge } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 export const LOGIN = "login",
   REGISTER = "register",
   CHANGEPASSWORD = "changePassword";
@@ -18,6 +18,6 @@ export const errorFormatter = (err) => {
   );
 };
 
-// export function cn(...inputs) {
-//   return twMerge(clsx(inputs));
-// }
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
