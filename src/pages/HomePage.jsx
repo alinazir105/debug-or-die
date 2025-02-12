@@ -10,24 +10,30 @@ import wing2 from '../assets/wing2.jpg';
 import engine from '../assets/engine.jpg';
 import tail from '../assets/tail.jpg';
 import landingGear from '../assets/landing-gear.jpg';
-import backgroundImage from '../assets/background-img.jpg';
+import backgroundImage from '../assets/bg2.jpg';
 
-const Card = ({ title, icon, children, backgroundImage }) => {
+const Card = ({ title, children, backgroundImage, index }) => {
   const [hovered, setHovered] = useState(false);
+  
+  const handleClick = () => {
+    window.location.href = `/page${index}`;
+  };
   
   return (
     <div
+      onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border-2 border-red-800 group/canvas-card flex items-center justify-center max-w-sm w-full mx-auto p-4 relative h-[30rem] bg-black/50 hover:bg-black/60 transition-colors duration-300 overflow-hidden shadow-2xl"
+      className="border-2 border-neutral-800 rounded-xl group/canvas-card flex items-center justify-center max-w-[10vw] w-full mx-auto p-4 relative h-[18vh] bg-black/50 hover:bg-black/60 transition-colors duration-300 overflow-hidden shadow-2xl cursor-pointer"
     >
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover/canvas-card:scale-110"
         style={{
           backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: 'center',
           opacity: 1,
           filter: 'brightness(1)',
-          boxShadow: 'inset 0 0 50px rgba(220, 38, 38, 0.5), 0 0 30px rgba(220, 38, 38, 0.4)' // Danger-themed shadow
+          boxShadow: 'inset 0 0 50px rgba(100, 38, 38, 0.5), 0 0 30px rgba(180, 38, 38, 0.4)'
         }}
       />
       
@@ -50,9 +56,6 @@ const Card = ({ title, icon, children, backgroundImage }) => {
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center">
-          {React.cloneElement(icon, { className: "h-16 w-16 text-white" })}
-        </div>
         <h2 className="text-white text-4xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
           {title}
         </h2>
@@ -73,31 +76,43 @@ export function CanvasRevealEffectDemo() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/80"></div>
-      <div className="relative z-10 pt-10">
-        <div className="fixed top-4 right-4 z-50">
-          <FlipClockCountdown
-            to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
-            renderMap={[false, false, true, true]}
-            labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
-            labelStyle={{
-              fontSize: 10,
-              fontWeight: 500,
-              textTransform: "uppercase",
-              color: "white"
-            }}
-            digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}
-            dividerStyle={{ color: "white", height: 1 }}
-            separatorStyle={{ color: "red", size: "6px" }}
-            duration={0.5}
-          >
-            Finished
-          </FlipClockCountdown>
-        </div>
-        <div className="py-20 flex flex-col lg:flex-row flex-wrap items-center justify-center w-full gap-4 mx-auto px-8">
+      
+      {/* Enhanced Header Section */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50 text-center">
+        <h1 className="text-4xl font-bold text-red-500 mb-3 animate-pulse drop-shadow-[0_0_10px_rgba(239,68,68,0.5)] tracking-wider">
+          SYSTEM FAILURE DETECTED
+        </h1>
+        <p className="text-white text-xl font-medium bg-black/60 px-6 py-3 rounded-lg backdrop-blur-sm border-2 border-red-500/30 shadow-[0_0_15px_rgba(0,0,0,0.3)] tracking-wide">
+          Click on the damaged components to initiate emergency repairs
+        </p>
+      </div>
+
+      <div className="fixed top-4 right-4 z-50">
+        <FlipClockCountdown
+          to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
+          renderMap={[false, false, true, true]}
+          labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
+          labelStyle={{
+            fontSize: 10,
+            fontWeight: 500,
+            textTransform: "uppercase",
+            color: "white"
+          }}
+          digitBlockStyle={{ width: 40, height: 60, fontSize: 30 }}
+          dividerStyle={{ color: "white", height: 1 }}
+          separatorStyle={{ color: "red", size: "6px" }}
+          duration={0.5}
+        >
+          Finished
+        </FlipClockCountdown>
+      </div>
+
+      <div className="relative h-screen w-full">
+        <div className="absolute left-[22.5%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
             title="Fix Wing 1" 
-            icon={<AceternityIcon />}
             backgroundImage={wing1}
+            index={1}
           >
             <CanvasRevealEffect 
               animationSpeed={5.1} 
@@ -106,10 +121,13 @@ export function CanvasRevealEffectDemo() {
               opacities={dangerOpacities}
             />
           </Card>
+        </div>
+
+        <div className="absolute left-[34%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
             title="Fix Wing 2" 
-            icon={<AceternityIcon />}
             backgroundImage={wing2}
+            index={2}
           >
             <CanvasRevealEffect 
               animationSpeed={3} 
@@ -118,10 +136,13 @@ export function CanvasRevealEffectDemo() {
               opacities={dangerOpacities}
             />
           </Card>
+        </div>
+
+        <div className="absolute left-[51.5%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
             title="Fix the Tail" 
-            icon={<AceternityIcon />}
             backgroundImage={tail}
+            index={3}
           >
             <CanvasRevealEffect 
               animationSpeed={3} 
@@ -130,10 +151,13 @@ export function CanvasRevealEffectDemo() {
               opacities={dangerOpacities}
             />
           </Card>
+        </div>
+
+        <div className="absolute left-[68.5%] top-[31.8%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
             title="Fix Engine 1" 
-            icon={<AceternityIcon />}
             backgroundImage={engine}
+            index={4}
           >
             <CanvasRevealEffect 
               animationSpeed={4} 
@@ -142,10 +166,13 @@ export function CanvasRevealEffectDemo() {
               opacities={dangerOpacities}
             />
           </Card>
+        </div>
+
+        <div className="absolute left-[80%] top-[31.8%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
             title="Fix Engine 2" 
-            icon={<AceternityIcon />}
             backgroundImage={engine}
+            index={5}
           >
             <CanvasRevealEffect 
               animationSpeed={2.5} 
@@ -154,10 +181,13 @@ export function CanvasRevealEffectDemo() {
               opacities={dangerOpacities}
             />
           </Card>
+        </div>
+
+        <div className="absolute left-[51.5%] top-[55%] transform -translate-x-1/2 -translate-y-1/2">
           <Card 
-            title="Fix the Landing Gear" 
-            icon={<AceternityIcon />}
+            title="Fix Landing Gear" 
             backgroundImage={landingGear}
+            index={6}
           >
             <CanvasRevealEffect 
               animationSpeed={3.5} 
@@ -171,7 +201,6 @@ export function CanvasRevealEffectDemo() {
     </div>
   );
 }
-
 
 const AceternityIcon = () => {
   return (
