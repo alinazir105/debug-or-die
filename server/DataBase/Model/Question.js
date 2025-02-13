@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const QuesSchema = new mongoose.Schema({
-  difficulty: {
-    type: String,
-    enum: ["easy", "medium", "hard"],
-    required: true,
-  },
   name: {
     type: String,
     required: true,
@@ -14,35 +9,14 @@ const QuesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  buggyCode: {
+  byggyCode: {
     type: String,
     required: true,
   },
-  examples: [
+  hints: [
     {
-      input: {
-        type: String,
-        required: true,
-      },
-      output: {
-        type: String,
-        required: true,
-      },
-      explanation: {
-        type: String,
-      },
-    },
-  ],
-  testCases: [
-    {
-      input: {
-        type: String,
-        required: true,
-      },
-      expectedOutput: {
-        type: String,
-        required: true,
-      },
+      type: String, // Array of hints
+      required: true,
     },
   ],
   noOfSubm: {

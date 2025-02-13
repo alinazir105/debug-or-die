@@ -73,3 +73,115 @@ GET /loggedIn 11/02/2025, 1:36:09 pm
 GET /problems 11/02/2025, 1:36:09 pm
 GET /loggedIn 11/02/2025, 1:36:13 pm
 GET /problems 11/02/2025, 1:36:13 pm
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 13/02/2025, 12:03:43 am
+Database Connected !!!
+gcc-oj-container Id : 33aae15e42f2d1ca751064aaf59a7ccfa3d25afb99e49d3aedd0ba1c90f69933
+py-oj-container Id : 919492a69c3e083a08948a4bc4345f02d317a76c23386543912305c1b64f7f0a
+js-oj-container Id : a66c6e0f088cf99e9c22ac211e102c0bc26616f4d26ca826c424d4cd75b0c1ff
+java-oj-container Id : d55e94583686ca387ca55434d9ecfe94a42e6fe687985a62411d59ac0695eae4
+
+All Containers Initialized
+GET /loggedIn 13/02/2025, 12:18:59 am
+GET /problems 13/02/2025, 12:18:59 am
+POST /login 13/02/2025, 12:19:13 am
+GET /loggedIn 13/02/2025, 12:19:13 am
+GET /problems 13/02/2025, 12:46:07 am
+GET /loggedIn 13/02/2025, 12:46:07 am
+GET /loggedIn 13/02/2025, 12:49:52 am
+GET /problems 13/02/2025, 12:49:52 am
+GET /problems 13/02/2025, 12:51:06 am
+GET /loggedIn 13/02/2025, 12:51:06 am
+GET /problems 13/02/2025, 12:51:23 am
+GET /loggedIn 13/02/2025, 12:51:24 am
+GET /loggedIn 13/02/2025, 12:58:21 am
+GET /problems 13/02/2025, 12:58:21 am
+GET /loggedIn 13/02/2025, 12:59:19 am
+GET /problems 13/02/2025, 12:59:19 am
+GET /loggedIn 13/02/2025, 1:00:11 am
+GET /problems 13/02/2025, 1:00:11 am
+GET /loggedIn 13/02/2025, 1:00:22 am
+GET /problems 13/02/2025, 1:00:22 am
+GET /problems 13/02/2025, 1:14:01 am
+GET /loggedIn 13/02/2025, 1:14:01 am
+GET /loggedIn 13/02/2025, 1:34:44 am
+GET /problems 13/02/2025, 1:34:44 am
+GET /problems 13/02/2025, 1:34:59 am
+GET /loggedIn 13/02/2025, 1:34:59 am
+GET /problems 13/02/2025, 1:36:29 am
+POST /login 13/02/2025, 1:36:34 am
+GET /loggedIn 13/02/2025, 1:36:35 am
+GET /problems 13/02/2025, 1:36:42 am
+POST /register 13/02/2025, 1:37:07 am
+GET /loggedIn 13/02/2025, 1:37:07 am
+GET /problems 13/02/2025, 1:37:11 am
+POST /login 13/02/2025, 1:37:18 am
+GET /loggedIn 13/02/2025, 1:37:18 am
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 13/02/2025, 6:10:26 pm
+Database Connected !!!
+gcc-oj-container Id : db118b40f4ac420c199dcf741937bbd891273945762ebacb27a58d44563f43d4
+py-oj-container Id : 2d1b9c9e5cd6e17afe6b386656cc6f6d63a99100ac9bd9c1ffaf22245c22efeb
+js-oj-container Id : 774764ce2746cc2bfe1d87c14cd463ad0560fcc9bfd0b2df4e46e048084642f2
+java-oj-container Id : fb254f54b0da17f5bd797c5b657334c15df54f3b97ee7e979b011e9803f9aef3
+
+All Containers Initialized
+GET /problems 13/02/2025, 6:15:38 pm
+GET /problems 13/02/2025, 6:24:39 pm
+GET /problems 13/02/2025, 6:25:34 pm
+GET /problems 13/02/2025, 6:29:06 pm
+GET /problems 13/02/2025, 6:29:33 pm
+GET /problems 13/02/2025, 6:30:02 pm
+GET /problems 13/02/2025, 6:33:16 pm
+GET /problems 13/02/2025, 6:42:12 pm
+POST /login 13/02/2025, 6:42:36 pm
+GET /loggedIn 13/02/2025, 6:42:36 pm
+GET /problems 13/02/2025, 6:42:55 pm
+GET /problems 13/02/2025, 6:43:04 pm
+GET /problems 13/02/2025, 6:43:25 pm
+GET /problems 13/02/2025, 6:43:26 pm
+GET /problems 13/02/2025, 6:44:10 pm
+GET /problems 13/02/2025, 6:44:25 pm
+GET /problems 13/02/2025, 6:44:45 pm
+GET /problems 13/02/2025, 6:50:42 pm
+GET /problems 13/02/2025, 6:50:48 pm
+GET /problems 13/02/2025, 6:51:04 pm
+GET /problems 13/02/2025, 6:51:30 pm
+GET /problems 13/02/2025, 6:51:37 pm
+GET /problems 13/02/2025, 6:51:46 pm
+GET /problems 13/02/2025, 8:43:00 pm
+GET /problems 13/02/2025, 8:58:19 pm
+GET /problems 13/02/2025, 9:19:50 pm
+GET /problems 13/02/2025, 9:23:27 pm
+GET /problems 13/02/2025, 9:24:29 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:35:16 pm
+GET /problems 13/02/2025, 9:35:16 pm
+GET /problems 13/02/2025, 9:36:51 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:36:51 pm
+GET /problems 13/02/2025, 9:37:10 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:37:10 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:39:35 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:39:54 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:40:24 pm
+GET /problems 13/02/2025, 9:40:28 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:40:28 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:44:30 pm
+GET /problems 13/02/2025, 9:44:31 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:44:31 pm
+GET /problems 13/02/2025, 9:47:08 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:47:08 pm
+GET /problems 13/02/2025, 9:47:54 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:47:54 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:48:08 pm
+GET /problems 13/02/2025, 9:48:08 pm
+GET /problems 13/02/2025, 9:48:09 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 13/02/2025, 9:48:09 pm
+GET /problems 13/02/2025, 11:53:13 pm
+POST /login 13/02/2025, 11:53:30 pm
+GET /loggedIn 13/02/2025, 11:53:30 pm
+GET /problems 13/02/2025, 11:54:50 pm
+GET /problems/67a899922a01af5e6917fd2e 13/02/2025, 11:54:50 pm
+GET /problems 13/02/2025, 11:55:47 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 13/02/2025, 11:55:49 pm

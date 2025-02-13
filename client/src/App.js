@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import MainPage from "../src/pages/MainPage/MainPage";
 import HomePage from "../src/pages/HomePage/HomePage";
+import GlobalTimer from "../src/compenents/GlobalTimer/GlobalTimer";
 import { useLocation } from "react-router";
 
 import NavBar from "./compenents/NavBar/NavBar";
@@ -25,27 +26,32 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getLoggedIn());
+    // dispatch(getLoggedIn());
     dispatch(fetchQuestionListData());
-    dispatch(
-      messageActions.set({
-        type: "info",
-        message: "Welcome to website !",
-        description:
-          "This website is to solve coding questions and check against testcases",
-      })
-    );
+    // dispatch(
+    //   messageActions.set({
+    //     type: "info",
+    //     message: "Welcome to website !",
+    //     description:
+    //       "This website is to solve coding questions and check against testcases",
+    //   })
+    // );
   }, [dispatch]);
 
   const isMainPage = location.pathname === "/mainpage";
   const isHomePage = location.pathname === "/homepage";
 
+  const noTimerRoutes = ["/", "/mainpage", "/login", "/register", "/gameover"];
+  const showTimer = !noTimerRoutes.includes(location.pathname);
+
   return (
     <div className={isMainPage || isHomePage ? "" : classes.App}>
+      {/* {showTimer && <GlobalTimer />} */}
       {!isMainPage && !isHomePage && <NavBar />}
       {!isMainPage && !isHomePage && <Message />}
       {/* {!isMainPage && <FooterFAB />} */}
-      {!isMainPage && !isHomePage && <ScrollToTop />}
+      {/* {!isMainPage && !isHomePage && <ScrollToTop />} */}
+      <ScrollToTop />
       {!isMainPage && !isHomePage && <NavigationStack />}
 
       <Routes>

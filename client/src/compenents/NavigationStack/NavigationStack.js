@@ -9,6 +9,7 @@ import { LOGIN, REGISTER, CHANGEPASSWORD } from "../../utils";
 // const Home = React.lazy(() => import('./pages/Home/Home'));
 const MainPage = React.lazy(() => import("../../pages/MainPage/MainPage"));
 const HomePage = React.lazy(() => import("../../pages/HomePage/HomePage"));
+const GameOver = React.lazy(() => import("../../pages/GameOver/GameOver"));
 const QuestionList = React.lazy(() =>
   import("../../pages/QuestionList/QuestionList")
 );
@@ -46,6 +47,7 @@ const NavigationStack = () => {
           <Route exact path="/" element={<Navigate replace to="/login" />} />
           <Route exact path="/mainpage" element={<MainPage />} />
           <Route exact apth="/homepage" element={<HomePage />} />
+          <Route exact apth="/gameover" element={<GameOver />} />
           <Route exact path="/questions" element={<QuestionList />} />
           <Route exact path="/questions/:id" element={<Question />} />
           <Route exact path="/leaderboard" element={<LeaderBoard />} />

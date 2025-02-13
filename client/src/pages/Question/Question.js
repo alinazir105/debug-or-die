@@ -21,7 +21,12 @@ const Question = () => {
 
   const { id } = useParams();
 
-  const { loading, error, question } = useFetchProblems(id);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(undefined);
+  const [question, setQuestion] = useState(undefined);
+  const [buggyCode, setBuggyCode] = useState("");
+
+  // const { loading, error, question } = useFetchProblems(id);
 
   // not-initialized, submitting, submitted
   const [codeSubmittingState, setcodeSubmittingState] =
@@ -32,8 +37,38 @@ const Question = () => {
     "selectedlangoj",
     "cpp"
   );
-  const [code, setCode] = useState(defaultCodes[selectedLang]);
+  const [code, setCode] = useState("");
   const [response, setResponse] = useState([]);
+
+  useEffect(() => {
+    setLoading(true);
+    setError(undefined);
+    setQuestion(undefined);
+    setBuggyCode("");
+
+    const fetchProblem = async () => {
+      try {
+        const response = await fetch(
+          `${SERVER_LINK}/api/explore/problems/${id}`
+        );
+        if (!response.ok) {
+          throw new Error(`Problem not found with id: ${id}`);
+        }
+
+        const data = await response.json();
+        setQuestion(data);
+        setBuggyCode(data.buggyCode);
+
+        setCode((prev) => (prev === "" ? data.buggyCode || "" : prev));
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProblem();
+  }, [id]);
 
   const endRef = useRef(null);
 
@@ -168,23 +203,13 @@ const Question = () => {
             <div className={classes.body}>
               <div className={classes.desc}>{question.description}</div>
             </div>
-            {question.examples.map((example, index) => (
+            {question.hints.map((hint, index) => (
               <div key={index} className={classes.body}>
                 <div className={classes.example} exn={index + 1}>
                   <div>
-                    <span>Input : </span>
-                    {example.input}
+                    <span>Hint {index + 1}: </span>
+                    {hint}
                   </div>
-                  <div>
-                    <span>Output : </span>
-                    {example.output}
-                  </div>
-                  {example.explaination && (
-                    <div>
-                      <span>Explaination : </span>
-                      {example.explaination}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
@@ -217,8 +242,8 @@ const Question = () => {
               <div className={classes.editorText}>
                 <CodeEditorv3
                   selectedLang={selectedLang}
-                  code={code}
-                  setCode={setCode}
+                  buggyCode={buggyCode}
+                  setBuggyCode={setBuggyCode}
                   language={selectedLang}
                   fontSize={codeFontSize}
                 />
@@ -308,6 +333,7 @@ const useFetchProblems = (id) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(undefined);
   const [question, setQuestion] = useState(undefined);
+  const [buggyCode, setBuggyCode] = useState(undefined);
 
   /** @type {Object.<string, Array>} */
   const problems = useSelector((state) => state.questions);
@@ -319,8 +345,10 @@ const useFetchProblems = (id) => {
 
     if (!problems.isLoading) {
       const matchProblem = problems.questions.find((value) => value._id === id);
-      if (matchProblem) setQuestion(matchProblem);
-      else setError(`No such problem found with id: ${id}`);
+      if (matchProblem) {
+        setQuestion(matchProblem);
+        setBuggyCode(question.buggyCode);
+      } else setError(`No such problem found with id: ${id}`);
 
       setLoading(false);
     }
