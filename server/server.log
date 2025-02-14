@@ -294,3 +294,30 @@ All Containers Initialized
 GET /problems 14/02/2025, 2:54:21 pm
 GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:54:21 pm
 POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:54:24 pm
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 14/02/2025, 2:55:41 pm
+Database Connected !!!
+gcc-oj-container Id : a64fdc1f5815be18357c24a98c6cade106963a9250607018bde1480dc07fb16c
+py-oj-container Id : e922d709ec7136b2652d1f7a72e4ab276b33191642b2915734508559f6d10ce5
+js-oj-container Id : 6547b866159ff6a9a12c6c03de2e4f3cab1883a0b4e1bd6241028c5706004845
+java-oj-container Id : 1db61daaed9f148edb6ffff6983490e37a1eee0faee69c7c38f49d9cd30f2e1b
+
+All Containers Initialized
+GET /problems 14/02/2025, 2:55:48 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:55:48 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:55:51 pm
+GET /problems 14/02/2025, 2:56:28 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:56:28 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:56:42 pm
+GET /problems 14/02/2025, 2:57:20 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:57:20 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:57:35 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 2:58:19 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 3:01:30 pm
+GET /problems 14/02/2025, 3:01:32 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 3:01:32 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 3:01:50 pm
+GET /problems 14/02/2025, 3:02:52 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 3:02:52 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 14/02/2025, 3:03:08 pm
