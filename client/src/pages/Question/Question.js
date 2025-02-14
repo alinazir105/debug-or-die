@@ -88,62 +88,61 @@ const Question = () => {
         method: "POST",
         credentials: "include",
         body: JSON.stringify({
-          code,
-          language: selectedLang,
-          testcase: question.testcase,
+          buggyCode,
           quesName: question.name,
+          language: "",
         }),
       });
       const queryData = await query.json();
       setResponse(queryData);
 
-      if (query.ok) {
-        const intervalID = setInterval(async () => {
-          const response = await fetch(
-            `${SERVER_LINK}/api/explore/status/${queryData.queryId}`,
-            {
-              headers: {
-                "Content-Type": "application/json",
-              },
-              method: "GET",
-            }
-          );
-          const data = await response.json();
-          if (!response.ok) {
-            clearInterval(intervalID);
-            setcodeSubmittingState("submitted");
-            setResponse(data);
-          } else if (data.status !== "pending") {
-            clearInterval(intervalID);
-            setcodeSubmittingState("submitted");
-            setResponse({ ...data.output, status: data.status });
-          }
-          // else console.log('status -> pending', data);
-        }, 1000);
-      } else {
-        setcodeSubmittingState("submitted");
-      }
+      // if (query.ok) {
+      //   const intervalID = setInterval(async () => {
+      //     const response = await fetch(
+      //       `${SERVER_LINK}/api/explore/status/${queryData.queryId}`,
+      //       {
+      //         headers: {
+      //           "Content-Type": "application/json",
+      //         },
+      //         method: "GET",
+      //       }
+      //     );
+      //     const data = await response.json();
+      //     if (!response.ok) {
+      //       clearInterval(intervalID);
+      //       setcodeSubmittingState("submitted");
+      //       setResponse(data);
+      //     } else if (data.status !== "pending") {
+      //       clearInterval(intervalID);
+      //       setcodeSubmittingState("submitted");
+      //       setResponse({ ...data.output, status: data.status });
+      //     }
+      //     // else console.log('status -> pending', data);
+      //   }, 1000);
+      // } else {
+      //   setcodeSubmittingState("submitted");
+      // }
 
-      endRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      // endRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (error) {
       setResponse({
-        msg: "caught errors while sending code to server for getting verdict",
+        msg: "Error while sending code to the server",
         serverError: JSON.stringify(error),
       });
       setcodeSubmittingState("submitted");
     }
   };
 
-  const resetCode = () => {
-    setCode(defaultCodes[selectedLang]);
-  };
-  const showCorrectCode = () => {
-    setCode(correctCode[question.testcase][selectedLang]);
-  };
+  // const resetCode = () => {
+  //   setCode(defaultCodes[selectedLang]);
+  // };
+  // const showCorrectCode = () => {
+  //   setCode(correctCode[question.testcase][selectedLang]);
+  // };
 
   return (
     <Fragment>
-      {loading && <LoadingSpinner />}
+      {loading}
       {!loading && error && (
         <div>
           <div className="errorTemplate">
@@ -180,7 +179,7 @@ const Question = () => {
           <div className={classes.head}>
             <div style={{ display: "inline-block" }}>
               <div className={classes.heading}>{question.name}</div>
-              <div className={classes.extraContent}>
+              {/* <div className={classes.extraContent}>
                 <div className={classes.level} diff-color={question.difficulty}>
                   {question.difficulty}
                 </div>
@@ -196,7 +195,7 @@ const Question = () => {
                 <div className={classes.subm}>
                   {question.noOfSubm} <span>Submissions</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={classes.notHead}>
@@ -222,7 +221,7 @@ const Question = () => {
                 /&#62;
               </div>
 
-              <Options
+              {/* <Options
                 favStyle={{
                   zIndex: "899",
                   position: "absolute",
@@ -237,7 +236,7 @@ const Question = () => {
                 showCorrectCode={showCorrectCode}
                 codeEditable
                 correctCodeAvailable={!!correctCode[question.testcase]}
-              />
+              /> */}
 
               <div className={classes.editorText}>
                 <CodeEditorv3
@@ -259,15 +258,9 @@ const Question = () => {
                   : "wanna submit again"}
                 &#160;/&#62;
               </div>
-              <ButtonCustom to="/" onClick={submitHandler} color="green">
-                {codeSubmittingState === "submitting" ? "Submitting" : "Submit"}
-                {codeSubmittingState === "submitting" ? (
-                  <div className={classes.spin} />
-                ) : (
-                  <SendIcon
-                    style={{ marginLeft: "0.6em", fontSize: "1.2em" }}
-                  />
-                )}
+              <ButtonCustom onClick={submitHandler} color="green">
+                Submit
+                <SendIcon style={{ marginLeft: "0.6em", fontSize: "1.2em" }} />
               </ButtonCustom>
             </div>
             {codeSubmittingState !== "not-initialized" && (
@@ -329,33 +322,33 @@ const Question = () => {
   );
 };
 
-const useFetchProblems = (id) => {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(undefined);
-  const [question, setQuestion] = useState(undefined);
-  const [buggyCode, setBuggyCode] = useState(undefined);
+// const useFetchProblems = (id) => {
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(undefined);
+//   const [question, setQuestion] = useState(undefined);
+//   const [buggyCode, setBuggyCode] = useState(undefined);
 
-  /** @type {Object.<string, Array>} */
-  const problems = useSelector((state) => state.questions);
+//   /** @type {Object.<string, Array>} */
+//   const problems = useSelector((state) => state.questions);
 
-  useEffect(() => {
-    setLoading(true);
-    setError(undefined);
-    setQuestion(undefined);
+//   useEffect(() => {
+//     setLoading(true);
+//     setError(undefined);
+//     setQuestion(undefined);
 
-    if (!problems.isLoading) {
-      const matchProblem = problems.questions.find((value) => value._id === id);
-      if (matchProblem) {
-        setQuestion(matchProblem);
-        setBuggyCode(question.buggyCode);
-      } else setError(`No such problem found with id: ${id}`);
+//     if (!problems.isLoading) {
+//       const matchProblem = problems.questions.find((value) => value._id === id);
+//       if (matchProblem) {
+//         setQuestion(matchProblem);
+//         setBuggyCode(question.buggyCode);
+//       } else setError(`No such problem found with id: ${id}`);
 
-      setLoading(false);
-    }
-  }, [id, problems]);
+//       setLoading(false);
+//     }
+//   }, [id, problems]);
 
-  return { loading, error, question };
-};
+//   return { loading, error, question };
+// };
 
 // const useFetchProblems = id => {
 //     const [loading, setLoading] = useState(true);

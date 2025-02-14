@@ -14,8 +14,8 @@ import "ace-builds/src-noconflict/ext-language_tools";
 
 const CodeEditorv3 = (props) => {
   const {
-    code,
-    setCode,
+    buggyCode,
+    setBuggyCode,
     language,
     fontSize,
     isReadOnly = false,
@@ -23,24 +23,26 @@ const CodeEditorv3 = (props) => {
   } = props;
 
   let mode = "c_cpp";
-  switch (language) {
-    case "c":
-      mode = "c_cpp";
-      break;
-    case "cpp":
-      mode = "c_cpp";
-      break;
-    case "java":
-      mode = "java";
-      break;
-    case "py":
-      mode = "python";
-      break;
-    case "js":
-      mode = "javascript";
-      break;
-    default:
-      mode = "c_cpp";
+  if (language) {
+    switch (language) {
+      case "c":
+        mode = "c_cpp";
+        break;
+      case "cpp":
+        mode = "c_cpp";
+        break;
+      case "java":
+        mode = "java";
+        break;
+      case "py":
+        mode = "python";
+        break;
+      case "js":
+        mode = "javascript";
+        break;
+      default:
+        mode = "c_cpp";
+    }
   }
 
   return (
@@ -70,13 +72,13 @@ const CodeEditorv3 = (props) => {
         </div>
       )}
       <AceEditor
-        placeholder="Enter your code here"
+        // placeholder="Enter your code here"
         mode={mode}
         theme="monokai"
         name="editorv3"
-        onLoad={() => {
-          // console.log('loaded')
-        }}
+        // onLoad={() => {
+        //   // console.log('loaded')
+        // }}
         onChange={(value) => setBuggyCode(value)}
         fontSize={parseInt(fontSize)}
         showPrintMargin={false}
@@ -85,13 +87,13 @@ const CodeEditorv3 = (props) => {
         highlightActiveLine={true}
         value={buggyCode}
         width="100%"
-        setOptions={{
-          enableBasicAutocompletion: true,
-          enableLiveAutocompletion: true,
-          enableSnippets: false,
-          showLineNumbers: true,
-          tabSize: 4,
-        }}
+        // setOptions={{
+        //   enableBasicAutocompletion: true,
+        //   enableLiveAutocompletion: true,
+        //   enableSnippets: false,
+        //   showLineNumbers: true,
+        //   tabSize: 4,
+        // }}
       />
     </Fragment>
   );
