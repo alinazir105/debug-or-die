@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes smokeTrail {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .animate-smoke-trail {
+    animation: smokeTrail 5s ease-in-out infinite;
+  }
+  
+  .bg-gradient-to-t {
+    background: linear-gradient(to top, rgba(96, 96, 96, 0.5), transparent);
+  }
+  
 @font-face {
     font-family: 'gotham';
     src: url('./assests/fonts/gotham-medium.woff2');

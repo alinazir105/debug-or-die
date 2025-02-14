@@ -177,134 +177,234 @@ bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
   port: 6379
 } 10/02/2025, 10:06:04 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+<<<<<<< Updated upstream
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:46 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:22 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:46 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:22 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:46 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:47 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:23 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:48 pm
 bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16) {
+=======
+} 14/02/2025, 12:50:24 pm
+bull/redis error Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
+>>>>>>> Stashed changes
   errno: -4078,
   code: 'ECONNREFUSED',
   syscall: 'connect',
   address: '127.0.0.1',
   port: 6379
+<<<<<<< Updated upstream
 } 14/02/2025, 12:41:48 pm
 [31mDocker Error:  java-oj-container Docker Error : {"msg":"on docker error","error":{"code":125,"killed":false,"signal":null,"cmd":"docker run -i -d --rm --mount type=bind,src=\"C:\\Users\\Hammad\\Desktop\\dev\\Online-Judge-Project\\server\\CodeExecuter\\codeFiles\",dst=/codeFiles --name java-oj-container --label oj=oj openjdk:20-slim"},"stderr":"docker: Error response from daemon: Conflict. The container name \"/java-oj-container\" is already in use by container \"365e96379abb6842ba8610df23c7859870696e3c7798c8d926361d2dcebf7438\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.\n"}[39m
 [31m14/02/2025, 2:34:03 pm[39m
 [31mDocker Error:  js-oj-container Docker Error : {"msg":"on docker error","error":{"code":125,"killed":false,"signal":null,"cmd":"docker run -i -d --rm --mount type=bind,src=\"C:\\Users\\Hammad\\Desktop\\dev\\Online-Judge-Project\\server\\CodeExecuter\\codeFiles\",dst=/codeFiles --name js-oj-container --label oj=oj node:16.17.0-bullseye-slim"},"stderr":"docker: Error response from daemon: Conflict. The container name \"/js-oj-container\" is already in use by container \"3c994fc79cb2ea7b5c042c73685db930164f0f53e1208661e455c387525d7c58\". You have to remove (or rename) that container to be able to reuse that name.\nSee 'docker run --help'.\n"}[39m
 [31m14/02/2025, 2:34:11 pm[39m
+=======
+} 14/02/2025, 12:50:24 pm
+[31mDocker Error:  py-oj-container Docker Error : {"msg":"on docker error","error":null,"stderr":"Unable to find image 'python:3.10-slim' locally\n3.10-slim: Pulling from library/python\nc29f5b76f736: Pulling fs layer\n74e68b11a1c1: Pulling fs layer\na477a912afa7: Pulling fs layer\n8c67a072a8ad: Pulling fs layer\n8c67a072a8ad: Waiting\n74e68b11a1c1: Verifying Checksum\n74e68b11a1c1: Download complete\n8c67a072a8ad: Download complete\na477a912afa7: Verifying Checksum\na477a912afa7: Download complete\nc29f5b76f736: Verifying Checksum\nc29f5b76f736: Download complete\nc29f5b76f736: Pull complete\n74e68b11a1c1: Pull complete\na477a912afa7: Pull complete\n8c67a072a8ad: Pull complete\nDigest: sha256:66aad90b231f011cb80e1966e03526a7175f0586724981969b23903abac19081\nStatus: Downloaded newer image for python:3.10-slim\n"}[39m
+[31m14/02/2025, 1:12:55 pm[39m
+>>>>>>> Stashed changes
