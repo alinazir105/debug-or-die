@@ -21,6 +21,7 @@
     "bootstrap": "^5.2.0-beta1",
     "copy-to-clipboard": "^3.3.2",
     "framer-motion": "^12.4.2",
+    "lucide-react": "^0.475.0",
     "moment": "^2.29.4",
     "oj-client": "file:",
     "react": "^18.2.0",

@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import classes from "./App.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import MainPage from "../src/pages/MainPage/MainPage";
+import { BackgroundBeams } from "./pages/MainPage/MainPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import GlobalTimer from "../src/compenents/GlobalTimer/GlobalTimer";
 import { useLocation } from "react-router";
@@ -55,7 +55,7 @@ const App = () => {
       {!isMainPage && !isHomePage && <NavigationStack />}
 
       <Routes>
-        <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/mainpage" element={<BackgroundBeams />} />
         <Route path="/homepage" element={<HomePage />} />
       </Routes>
     </div>

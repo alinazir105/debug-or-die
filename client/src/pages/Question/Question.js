@@ -6,6 +6,7 @@ import CodeEditorv3 from "./Editor/CodeEditorv3";
 import ButtonCustom from "../../compenents/Button/Button";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import LoadingSpinner from "../../compenents/LoadingSpinner/LoadingSpinner";
+import GlobalTimer from "../../compenents/GlobalTimer/GlobalTimer"; // Import the GlobalTimer component
 
 import SendIcon from "@mui/icons-material/Send";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -25,8 +26,6 @@ const Question = () => {
   const [error, setError] = useState(undefined);
   const [question, setQuestion] = useState(undefined);
   const [buggyCode, setBuggyCode] = useState("");
-
-  // const { loading, error, question } = useFetchProblems(id);
 
   // not-initialized, submitting, submitted
   const [codeSubmittingState, setcodeSubmittingState] =
@@ -96,34 +95,7 @@ const Question = () => {
       const queryData = await query.json();
       setResponse(queryData);
 
-      // if (query.ok) {
-      //   const intervalID = setInterval(async () => {
-      //     const response = await fetch(
-      //       `${SERVER_LINK}/api/explore/status/${queryData.queryId}`,
-      //       {
-      //         headers: {
-      //           "Content-Type": "application/json",
-      //         },
-      //         method: "GET",
-      //       }
-      //     );
-      //     const data = await response.json();
-      //     if (!response.ok) {
-      //       clearInterval(intervalID);
-      //       setcodeSubmittingState("submitted");
-      //       setResponse(data);
-      //     } else if (data.status !== "pending") {
-      //       clearInterval(intervalID);
-      //       setcodeSubmittingState("submitted");
-      //       setResponse({ ...data.output, status: data.status });
-      //     }
-      //     // else console.log('status -> pending', data);
-      //   }, 1000);
-      // } else {
-      //   setcodeSubmittingState("submitted");
-      // }
-
-      // endRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setcodeSubmittingState("submitted");
     } catch (error) {
       setResponse({
         msg: "Error while sending code to the server",
@@ -133,15 +105,13 @@ const Question = () => {
     }
   };
 
-  // const resetCode = () => {
-  //   setCode(defaultCodes[selectedLang]);
-  // };
-  // const showCorrectCode = () => {
-  //   setCode(correctCode[question.testcase][selectedLang]);
-  // };
-
   return (
     <Fragment>
+      {/* Add the GlobalTimer component here */}
+      <div className="fixed top-[8%] right-4 z-50">
+        <GlobalTimer />
+      </div>
+      
       {loading}
       {!loading && error && (
         <div>
@@ -179,23 +149,6 @@ const Question = () => {
           <div className={classes.head}>
             <div style={{ display: "inline-block" }}>
               <div className={classes.heading}>{question.name}</div>
-              {/* <div className={classes.extraContent}>
-                <div className={classes.level} diff-color={question.difficulty}>
-                  {question.difficulty}
-                </div>
-                <div className={classes.succ}>
-                  {question.noOfSuccess === 0
-                    ? 0
-                    : (
-                        (question.noOfSuccess / question.noOfSubm) *
-                        100
-                      ).toFixed(2)}
-                  %<span> Success</span>
-                </div>
-                <div className={classes.subm}>
-                  {question.noOfSubm} <span>Submissions</span>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className={classes.notHead}>
@@ -220,23 +173,6 @@ const Question = () => {
                 </span>{" "}
                 /&#62;
               </div>
-
-              {/* <Options
-                favStyle={{
-                  zIndex: "899",
-                  position: "absolute",
-                  top: "-2rem",
-                  right: "18%",
-                }}
-                resetCode={resetCode}
-                selectedLang={selectedLang}
-                codeFontSize={codeFontSize}
-                setSelectedLang={setSelectedLang}
-                setcodeFontSize={setcodeFontSize}
-                showCorrectCode={showCorrectCode}
-                codeEditable
-                correctCodeAvailable={!!correctCode[question.testcase]}
-              /> */}
 
               <div className={classes.editorText}>
                 <CodeEditorv3
@@ -321,79 +257,6 @@ const Question = () => {
     </Fragment>
   );
 };
-
-// const useFetchProblems = (id) => {
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(undefined);
-//   const [question, setQuestion] = useState(undefined);
-//   const [buggyCode, setBuggyCode] = useState(undefined);
-
-//   /** @type {Object.<string, Array>} */
-//   const problems = useSelector((state) => state.questions);
-
-//   useEffect(() => {
-//     setLoading(true);
-//     setError(undefined);
-//     setQuestion(undefined);
-
-//     if (!problems.isLoading) {
-//       const matchProblem = problems.questions.find((value) => value._id === id);
-//       if (matchProblem) {
-//         setQuestion(matchProblem);
-//         setBuggyCode(question.buggyCode);
-//       } else setError(`No such problem found with id: ${id}`);
-
-//       setLoading(false);
-//     }
-//   }, [id, problems]);
-
-//   return { loading, error, question };
-// };
-
-// const useFetchProblems = id => {
-//     const [loading, setLoading] = useState(true);
-//     const [error, setError] = useState(undefined);
-//     const [question, setQuestion] = useState(undefined);
-
-//     useEffect(() => {
-//         const controller = new AbortController();
-//         const signal = controller.signal;
-
-//         setLoading(true);
-//         setError(undefined);
-//         setQuestion(undefined);
-
-//         fetch(`${SERVER_LINK}/api/explore/problems/${id}`,
-//             {
-//                 headers: {
-//                     'Content-Type': 'application/json'
-//                 },
-//                 method: 'GET',
-//                 signal,
-//             })
-//             .then(async res => {
-//                 if (res.ok) return res.json()
-//                 const json = await res.json();
-//                 return await Promise.reject(json);
-//             })
-//             .then(res => {
-//                 setQuestion(res);
-//                 setLoading(false)
-//             })
-//             .catch(err => {
-//                 if (err.name === "AbortError") {
-//                     console.log("Fetch Cancelled !");
-//                 } else {
-//                     setError(err);
-//                     setLoading(false);
-//                 }
-//             });
-
-//         return () => { controller.abort(); }
-//     }, [id]);
-
-//     return { loading, error, question };
-// }
 
 const useScrollToTop = (dependencies = []) => {
   useEffect(() => {
