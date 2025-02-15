@@ -44,7 +44,7 @@ const NavigationStack = () => {
       >
         <Routes>
           {/* <Route exact path='/' element={<Home />} /> */}
-          <Route exact path="/" element={<Navigate replace to="/login" />} />
+          <Route exact path="/" element={<Navigate replace to="/register" />} />
           <Route exact path="/mainpage" element={<MainPage />} />
           <Route exact apth="/homepage" element={<HomePage />} />
           <Route exact apth="/gameover" element={<GameOver />} />

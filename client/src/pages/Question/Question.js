@@ -111,7 +111,7 @@ const Question = () => {
       <div className="fixed top-[8%] right-4 z-50">
         <GlobalTimer />
       </div>
-      
+
       {loading}
       {!loading && error && (
         <div>
@@ -133,9 +133,9 @@ const Question = () => {
         <div className={classes.contain}>
           <div className={classes.back}>
             <div className={classes.codeSnippet}>
-              &#60; go back to questions /&#62;
+              &#60; go back to cockpit /&#62;
             </div>
-            <ButtonCustom to="/questions" color="yellow">
+            <ButtonCustom to="/homepage" color="yellow">
               <ArrowBackIcon
                 style={{
                   marginRight: "0.3em",
@@ -165,6 +165,7 @@ const Question = () => {
                 </div>
               </div>
             ))}
+
             <div className={classes.editor}>
               <div className={classes.codeSnippet}>
                 &#60; write your code here in{" "}

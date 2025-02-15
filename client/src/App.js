@@ -40,6 +40,9 @@ const App = () => {
 
   const isMainPage = location.pathname === "/mainpage";
   const isHomePage = location.pathname === "/homepage";
+  const isLogin = location.pathname === "/login";
+  const isRegister = location.pathname === "/register";
+  const isQuestion = location.pathname.startsWith("/questions/");
 
   const noTimerRoutes = ["/", "/mainpage", "/login", "/register", "/gameover"];
   const showTimer = !noTimerRoutes.includes(location.pathname);
@@ -47,7 +50,9 @@ const App = () => {
   return (
     <div className={isMainPage || isHomePage ? "" : classes.App}>
       {/* {showTimer && <GlobalTimer />} */}
-      {!isMainPage && !isHomePage && <NavBar />}
+      {!isQuestion && !isLogin && !isRegister && !isMainPage && !isHomePage && (
+        <NavBar />
+      )}
       {!isMainPage && !isHomePage && <Message />}
       {/* {!isMainPage && <FooterFAB />} */}
       {/* {!isMainPage && !isHomePage && <ScrollToTop />} */}

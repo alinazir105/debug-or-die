@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
@@ -19,7 +20,7 @@ const TIMER_END_KEY = "system_failure_timer_end";
 // Function to get or set the end time
 const getOrSetTimerEnd = () => {
   const storedEndTime = localStorage.getItem(TIMER_END_KEY);
-  
+
   if (storedEndTime) {
     // If we have a stored end time, use it
     return parseInt(storedEndTime, 10);
@@ -31,11 +32,12 @@ const getOrSetTimerEnd = () => {
   }
 };
 
-const Card = ({ title, children, backgroundImage, index }) => {
+const Card = ({ title, children, backgroundImage, questionId }) => {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    window.location.href = `/page${index}`;
+    navigate(`/questions/${questionId}`);
   };
 
   return (
@@ -87,10 +89,10 @@ const Card = ({ title, children, backgroundImage, index }) => {
 export function CanvasRevealEffectDemo() {
   const dangerColors = [[139, 0, 0]];
   const dangerOpacities = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1];
-  
+
   // Get the timer end time when component mounts
   const [timerEndTime, setTimerEndTime] = useState(null);
-  
+
   useEffect(() => {
     // Set the timer end time when component mounts
     setTimerEndTime(getOrSetTimerEnd());
@@ -139,7 +141,12 @@ export function CanvasRevealEffectDemo() {
 
       <div className="relative h-screen w-full">
         <div className="absolute left-[22.5%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
-          <Card title="Fix Wing 1" backgroundImage={wing1} index={1}>
+          <Card
+            title="Fix Wing 1"
+            description="Fix Wing 1"
+            backgroundImage={wing1}
+            questionId="67b04069caaccbe3ef11b83a"
+          >
             <CanvasRevealEffect
               animationSpeed={5.1}
               containerClassName="bg-red-950"
@@ -150,7 +157,12 @@ export function CanvasRevealEffectDemo() {
         </div>
 
         <div className="absolute left-[34%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
-          <Card title="Fix Wing 2" backgroundImage={wing2} index={2}>
+          <Card
+            title="Fix Wing 2"
+            description="Fix Wing 2"
+            backgroundImage={wing2}
+            questionId="67ae0e4db5eb699a6a012cc3"
+          >
             <CanvasRevealEffect
               animationSpeed={3}
               containerClassName="bg-red-950"
@@ -161,7 +173,12 @@ export function CanvasRevealEffectDemo() {
         </div>
 
         <div className="absolute left-[51.5%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
-          <Card title="Fix the Tail" backgroundImage={tail} index={3}>
+          <Card
+            title="Fix the Tail"
+            description="Fix Tail"
+            backgroundImage={tail}
+            questionId="67ae0f10b5eb699a6a012cc7"
+          >
             <CanvasRevealEffect
               animationSpeed={3}
               containerClassName="bg-red-950"
@@ -172,7 +189,12 @@ export function CanvasRevealEffectDemo() {
         </div>
 
         <div className="absolute left-[68.5%] top-[31.8%] transform -translate-x-1/2 -translate-y-1/2">
-          <Card title="Fix Engine 1" backgroundImage={engine} index={4}>
+          <Card
+            title="Fix Engine 1"
+            description="Fix Engine 1"
+            backgroundImage={engine}
+            questionId="67b040e0caaccbe3ef11b83c"
+          >
             <CanvasRevealEffect
               animationSpeed={4}
               containerClassName="bg-red-950"
@@ -183,7 +205,12 @@ export function CanvasRevealEffectDemo() {
         </div>
 
         <div className="absolute left-[80%] top-[31.8%] transform -translate-x-1/2 -translate-y-1/2">
-          <Card title="Fix Engine 2" backgroundImage={engine} index={5}>
+          <Card
+            title="Fix Engine 2"
+            description="Fix Engine 2"
+            backgroundImage={engine}
+            questionId="67ae0e98b5eb699a6a012cc5"
+          >
             <CanvasRevealEffect
               animationSpeed={2.5}
               containerClassName="bg-red-950"
@@ -196,8 +223,9 @@ export function CanvasRevealEffectDemo() {
         <div className="absolute left-[51.5%] top-[55%] transform -translate-x-1/2 -translate-y-1/2">
           <Card
             title="Fix Landing Gear"
+            description="Fix Landing Gear"
             backgroundImage={landingGear}
-            index={6}
+            questionId="67ae0fa9b5eb699a6a012cc9"
           >
             <CanvasRevealEffect
               animationSpeed={3.5}
