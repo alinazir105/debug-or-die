@@ -5,6 +5,7 @@ import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import { CanvasRevealEffect } from "../../ui";
 import { AlertCircle } from "lucide-react";
+import GlobalTimer from "../../compenents/GlobalTimer/GlobalTimer";
 
 // Import your images
 import wing1 from "../../../src/assests/wing1.jpg";
@@ -14,23 +15,23 @@ import tail from "../../../src/assests/tail.jpg";
 import landingGear from "../../../src/assests/landing-gear.jpg";
 import backgroundImage from "../../../src/assests/bg2.jpg";
 
-// Store the end time in localStorage
-const TIMER_END_KEY = "system_failure_timer_end";
+// // Store the end time in localStorage
+// const TIMER_END_KEY = "system_failure_timer_end";
 
-// Function to get or set the end time
-const getOrSetTimerEnd = () => {
-  const storedEndTime = localStorage.getItem(TIMER_END_KEY);
+// // Function to get or set the end time
+// const getOrSetTimerEnd = () => {
+//   const storedEndTime = localStorage.getItem(TIMER_END_KEY);
 
-  if (storedEndTime) {
-    // If we have a stored end time, use it
-    return parseInt(storedEndTime, 10);
-  } else {
-    // Otherwise, create a new one (24 hours + 5 seconds from now)
-    const newEndTime = new Date().getTime() + 24 * 3600 * 1000 + 5000;
-    localStorage.setItem(TIMER_END_KEY, newEndTime.toString());
-    return newEndTime;
-  }
-};
+//   if (storedEndTime) {
+//     // If we have a stored end time, use it
+//     return parseInt(storedEndTime, 10);
+//   } else {
+//     // Otherwise, create a new one (24 hours + 5 seconds from now)
+//     const newEndTime = new Date().getTime() + 24 * 3600 * 1000 + 5000;
+//     localStorage.setItem(TIMER_END_KEY, newEndTime.toString());
+//     return newEndTime;
+//   }
+// };
 
 const Card = ({ title, children, backgroundImage, questionId }) => {
   const [hovered, setHovered] = useState(false);
@@ -91,12 +92,12 @@ export function CanvasRevealEffectDemo() {
   const dangerOpacities = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1];
 
   // Get the timer end time when component mounts
-  const [timerEndTime, setTimerEndTime] = useState(null);
+  // const [timerEndTime, setTimerEndTime] = useState(null);
 
-  useEffect(() => {
-    // Set the timer end time when component mounts
-    setTimerEndTime(getOrSetTimerEnd());
-  }, []);
+  // useEffect(() => {
+  //   // Set the timer end time when component mounts
+  //   setTimerEndTime(getOrSetTimerEnd());
+  // }, []);
 
   return (
     <div
@@ -117,7 +118,12 @@ export function CanvasRevealEffectDemo() {
         </p>
       </div>
 
+      {/* Replace the old timer implementation with the GlobalTimer component */}
       <div className="fixed top-4 right-4 z-50">
+        <GlobalTimer />
+      </div>
+
+      {/* <div className="fixed top-4 right-4 z-50">
         {timerEndTime && (
           <FlipClockCountdown
             to={timerEndTime}
@@ -137,7 +143,7 @@ export function CanvasRevealEffectDemo() {
             Finished
           </FlipClockCountdown>
         )}
-      </div>
+      </div> */}
 
       <div className="relative h-screen w-full">
         <div className="absolute left-[22.5%] top-[32%] transform -translate-x-1/2 -translate-y-1/2">
