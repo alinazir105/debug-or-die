@@ -555,3 +555,126 @@ GET /problems 15/02/2025, 7:49:27 pm
 POST /login 15/02/2025, 7:49:34 pm
 GET /loggedIn 15/02/2025, 7:49:34 pm
 GET /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 7:49:41 pm
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 15/02/2025, 9:59:42 pm
+Database Connected !!!
+gcc-oj-container Id : 90e98b41c019dc023ce8ffe9550c0a1b696fa4ec4855cee90302a35227dfa808
+py-oj-container Id : 729d8faeda9a2eed14a2758ba43437795b910845b630348348cc7b9e2aca2b1c
+js-oj-container Id : 86857bc9093a0da85f6f501e78b5b6efa404acb6ce14157b7a52402c93696eb0
+java-oj-container Id : 23e92eea668be73b0b8a297cd8210bc72231e7267bedbca3bb342c7123da2659
+
+All Containers Initialized
+GET /problems 15/02/2025, 10:00:41 pm
+POST /login 15/02/2025, 10:01:37 pm
+GET /loggedIn 15/02/2025, 10:01:37 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:03:15 pm
+GET /problems 15/02/2025, 10:04:10 pm
+GET /problems 15/02/2025, 10:04:15 pm
+POST /login 15/02/2025, 10:04:22 pm
+GET /loggedIn 15/02/2025, 10:04:22 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:04:31 pm
+GET /problems/67ae0e98b5eb699a6a012cc5 15/02/2025, 10:05:06 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 10:05:11 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:05:20 pm
+GET /problems 15/02/2025, 10:06:00 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:06:00 pm
+POST /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:06:37 pm
+POST /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:07:31 pm
+GET /problems/67ae0f10b5eb699a6a012cc7 15/02/2025, 10:08:08 pm
+GET /problems/67ae0fa9b5eb699a6a012cc9 15/02/2025, 10:08:11 pm
+POST /problems/67ae0fa9b5eb699a6a012cc9 15/02/2025, 10:09:15 pm
+GET /problems 15/02/2025, 10:09:18 pm
+GET /problems/67ae0fa9b5eb699a6a012cc9 15/02/2025, 10:09:18 pm
+POST /problems/67ae0fa9b5eb699a6a012cc9 15/02/2025, 10:10:04 pm
+POST /problems/67ae0fa9b5eb699a6a012cc9 15/02/2025, 10:10:13 pm
+GET /problems 15/02/2025, 10:11:04 pm
+POST /register 15/02/2025, 10:11:20 pm
+GET /loggedIn 15/02/2025, 10:11:20 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 10:11:37 pm
+POST /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 10:12:04 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:13:11 pm
+GET /problems 15/02/2025, 10:22:08 pm
+POST /login 15/02/2025, 10:22:17 pm
+GET /loggedIn 15/02/2025, 10:22:17 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:22:34 pm
+POST /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:23:04 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 10:24:32 pm
+GET /problems 15/02/2025, 10:32:48 pm
+POST /login 15/02/2025, 10:33:00 pm
+GET /loggedIn 15/02/2025, 10:33:01 pm
+GET /problems 15/02/2025, 10:35:31 pm
+POST /login 15/02/2025, 10:35:42 pm
+GET /loggedIn 15/02/2025, 10:35:42 pm
+GET /problems 15/02/2025, 10:37:57 pm
+POST /login 15/02/2025, 10:38:06 pm
+GET /loggedIn 15/02/2025, 10:38:06 pm
+GET /problems/67b04069caaccbe3ef11b83a 15/02/2025, 10:38:13 pm
+GET /problems 15/02/2025, 10:47:55 pm
+GET /problems 15/02/2025, 10:48:00 pm
+GET /problems 15/02/2025, 10:54:04 pm
+GET /problems 15/02/2025, 10:55:15 pm
+GET /problems 15/02/2025, 10:55:20 pm
+GET /problems/67a899922a01af5e6917fd2e 15/02/2025, 10:55:20 pm
+GET /problems 15/02/2025, 10:55:29 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 10:55:29 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 15/02/2025, 11:18:00 pm
+GET /problems/67ae0f10b5eb699a6a012cc7 15/02/2025, 11:18:02 pm
+GET /problems 15/02/2025, 11:27:05 pm
+POST /login 15/02/2025, 11:27:19 pm
+GET /loggedIn 15/02/2025, 11:27:19 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 11:27:36 pm
+GET /problems 15/02/2025, 11:31:36 pm
+GET /problems/67b040e0caaccbe3ef11b83c 15/02/2025, 11:31:36 pm
+GET /problems 16/02/2025, 12:17:42 am
+GET /problems/67b040e0caaccbe3ef11b83c 16/02/2025, 12:17:42 am
+GET /problems 16/02/2025, 12:17:45 am
+GET /problems/67b04069caaccbe3ef11b83a 16/02/2025, 12:17:46 am
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 16/02/2025, 11:52:41 am
+Database Connected !!!
+GET /problems 16/02/2025, 11:53:37 am
+POST /login 16/02/2025, 11:53:49 am
+GET /loggedIn 16/02/2025, 11:53:50 am
+GET /problems/67b04069caaccbe3ef11b83a 16/02/2025, 11:54:22 am
+In undefined env !
+Redis version greater than or equal to 2.8.18 Required !
+Server running on PORT 5000 16/02/2025, 12:29:22 pm
+Database Connected !!!
+GET /problems 16/02/2025, 12:29:34 pm
+POST /register 16/02/2025, 12:30:24 pm
+GET /loggedIn 16/02/2025, 12:30:25 pm
+GET /problems/67b040e0caaccbe3ef11b83c 16/02/2025, 12:30:31 pm
+GET /problems/67ae0f10b5eb699a6a012cc7 16/02/2025, 12:30:38 pm
+POST /problems/67ae0f10b5eb699a6a012cc7 16/02/2025, 12:31:03 pm
+GET /problems 16/02/2025, 12:39:20 pm
+POST /login 16/02/2025, 12:39:30 pm
+GET /loggedIn 16/02/2025, 12:39:30 pm
+GET /problems/67b040e0caaccbe3ef11b83c 16/02/2025, 12:39:39 pm
+GET /problems 16/02/2025, 12:39:49 pm
+GET /problems 16/02/2025, 12:40:10 pm
+GET /problems 16/02/2025, 12:43:28 pm
+GET /problems 16/02/2025, 12:43:29 pm
+GET /problems 16/02/2025, 12:43:31 pm
+GET /problems 16/02/2025, 12:43:46 pm
+GET /problems 16/02/2025, 12:44:04 pm
+POST /login 16/02/2025, 12:44:16 pm
+GET /loggedIn 16/02/2025, 12:44:16 pm
+GET /problems/67ae0e4db5eb699a6a012cc3 16/02/2025, 12:44:27 pm
+GET /problems 16/02/2025, 12:44:34 pm
+GET /problems 16/02/2025, 12:44:44 pm
+GET /problems 16/02/2025, 12:44:49 pm
+GET /problems 16/02/2025, 12:45:09 pm
+GET /problems 16/02/2025, 12:45:13 pm
+GET /problems 16/02/2025, 12:45:26 pm
+GET /problems 16/02/2025, 12:45:31 pm
+GET /problems 16/02/2025, 12:45:39 pm
+GET /problems 16/02/2025, 12:46:45 pm
+POST /login 16/02/2025, 12:46:55 pm
+GET /loggedIn 16/02/2025, 12:46:55 pm
+GET /problems/67ae0fa9b5eb699a6a012cc9 16/02/2025, 12:47:03 pm
+GET /problems 16/02/2025, 12:51:00 pm
+POST /login 16/02/2025, 12:51:07 pm
+GET /loggedIn 16/02/2025, 12:51:07 pm
+GET /problems 16/02/2025, 12:51:22 pm

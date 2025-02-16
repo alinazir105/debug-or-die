@@ -33,6 +33,12 @@ const Customform = React.lazy(() => import("../Customform/Customform"));
 const NavigationStack = () => {
   const loginState = useSelector((state) => state.auth);
 
+  // let isGameOver = location.pathname === "/gameover";
+
+  // if (isGameOver) {
+  //   return <Navigate replace to="/gameover" />;
+  // }
+
   return (
     <main style={{ marginTop: "5rem" }}>
       <Suspense

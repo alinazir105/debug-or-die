@@ -19,7 +19,7 @@ const GlobalTimer = () => {
       setTargetDate(parseInt(storedEndTime, 10));
     } else {
       // If no target date exists, create new one (90 minutes from now)
-      const newEndTime = new Date().getTime() + 30 * 1000;
+      const newEndTime = new Date().getTime() + 90 * 60 * 1000;
       localStorage.setItem(TIMER_END_KEY, newEndTime.toString());
       setTargetDate(newEndTime);
     }

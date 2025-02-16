@@ -94,7 +94,7 @@ import { Link } from "react-router-dom";
 export const BackgroundBeams = React.memo(({ className }) => {
   const resetTimer = () => {
     // Create a new 90-minute timer
-    const newEndTime = new Date().getTime() + 30 * 1000;
+    const newEndTime = new Date().getTime() + 90 * 60 * 1000;
     console.log(
       "New End Time:",
       newEndTime,
